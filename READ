@@ -1,0 +1,4 @@
+#spring-config.xml    spring配置（spring mvc配置视图解析器）
+#spring-dao.xml spring集成mybatis的配置文件 包括mapper datasource 配置
+#mybatis-config.xml mybatis的配置文件   mytatis的配置（开启驼峰匹配等等）
+#web.xml + spring-config.xml spring mvc的配置文件 视图解析器 contorller扫描路径
