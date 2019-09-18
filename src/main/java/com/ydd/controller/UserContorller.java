@@ -28,4 +28,14 @@ public class UserContorller {
 		//return "showUser";
 		return user ;
 	}
+	@RequestMapping(value ="/getUserByIdOnPage")
+	public String getUserByIdOnPage(Integer id, Model model){
+		System.out.println("--------------------------");
+		User user = userService.queryOneUserById(id);
+		System.out.println(user);
+		model.addAttribute("user", user);
+		return "showUser";
+		
+	}
+	
 }
