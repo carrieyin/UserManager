@@ -1,4 +1,4 @@
-package com.ydd.serviceimpl;
+package com.ydd.service.impl;
 
 import javax.annotation.Resource;
 

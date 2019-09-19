@@ -1,4 +1,4 @@
-package test;
+package com.ydd.mapper;
 
 import javax.annotation.Resource;
 
@@ -11,31 +11,28 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.ydd.entity.User;
-import com.ydd.mapper.UserMapper;
 import com.ydd.service.IUserService;
-import com.ydd.serviceimpl.UserServiceImpl;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring/spring-dao.xml","classpath:spring/spring-config.xml"})
+@ContextConfiguration({"classpath:spring/spring-dao.xml","classpath:spring/spring-mvc.xml"})
 public class UserMapperTest {
 	
 	@Autowired
 	private UserMapper userMapper;
-	
 	@Resource
 	private IUserService userService;
-	
 	Logger logger = LoggerFactory.getLogger(UserMapperTest.class);
 
+	
 	@Test
 	public void testQueryUserById(){
-		User user = userMapper.queryOneUserById(2);
-		logger.info(user.toString());
+		User user = userMapper.queryOneUserById(5);
+		System.out.println(user);
 	}
 	
 	@Test
 	public void testQueryUserByIdForServiceImpl(){
 		User user = userService.queryOneUserById(2);
-		System.out.println(user.toString());
+		System.out.println(user);
 	}
 }

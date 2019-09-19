@@ -1,8 +1,6 @@
 package com.ydd.controller;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +12,7 @@ import com.ydd.service.IUserService;
 @RequestMapping("/user")
 @Controller
 public class UserContorller {
+	
 	
 	@Resource
 	private IUserService userService;
